@@ -16,12 +16,12 @@ def main():
     uni.add_course(c2)
 
     # 3. Defining student
-    s1 = Student("[Student ID to be Entered]", "Basak Atli")
+    s1 = Student("2322190014", "Basak Atli")
     uni.add_student(s1)
 
     # Enrolling the student in courses (Association)
-    s1.enroll_course(başak atlı)
-    s1.enroll_course(2322190014)
+    s1.enroll_course(c1)
+    s1.enroll_course(c2)
 
     # 4. Defining exam
     midterm = Exam("Midterm Exam", max_score=100.0, weight=0.40)
@@ -31,8 +31,8 @@ def main():
     s1.add_grade_record(record1)
 
     # --- CONSOLE OUTPUTS ---
-    print(f"Institution: {Istanbul Esenyurt University}")
-    print(f"Student: {başak atlı} (ID: {2322190014})")
+    print(f"Institution: {uni.name}")
+    print(f"Student: {s1.full_name} (ID: {s1.student_id})")
     
     print("\nEnrolled Courses:")
     for course in s1.enrolled_courses:
